@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Navigation Tabs -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- calender cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="Assets/Home/logo-1.png"
+            class="img-fluid"
+            alt="Logo"
+            style="height: 50px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold text-dark" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-uppercase fw-bold text-dark"
+                href="pages.html"
+                >Pages</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase fw-bold text-dark" href="#"
+                >Our Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-uppercase fw-bold text-dark"
+                href="blog.html"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-uppercase fw-bold text-dark"
+                href="about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-uppercase fw-bold text-dark"
+                href="store.html"
+                >Store</a
+              >
+            </li>
+          </ul>
+          <div class="d-flex ms-4">
+            <button class="btn btn-link text-dark">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="25"
+                fill="black"
+                class="bi bi-bag"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                />
+              </svg>
+            </button>
+            <button class="btn btn-link text-dark">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="25"
+                fill="black"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div
+        class="container-fluid bg-dark d-flex justify-content-center align-items-center text-white flex-column"
+        id="discount"
+      >
+        <h1>Upcoming Events</h1>
+        <p>Home - Upcoming Events</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container  py-5">
+        <div class="input-group mb-3">
+          <span class="input-group-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="black"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              /></svg
+          ></span>
+
+          <input type="text" class="form-control" aria-label="search" />
+          <button class="text-uppercase fw-bold">Find events</button>
+          <ul class="nav nav-tabs ms-3" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="home-tab-pane"
+                aria-selected="true"
+              >
+                List
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="profile-tab-pane"
+                aria-selected="false"
+              >
+                Month
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="contact-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="contact-tab-pane"
+                aria-selected="false"
+              >
+                Day
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home-tab-pane"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+            tabindex="0"
+          >
+            <button class="btn btn-outline-dark">Today</button>
+        
+            <div class="container" id="blog-img">
+              <div class="d-flex align-items-center">
+                <span class="me-3 fs-3 fw-bold">Ongoing</span>
+                <hr class="flex-grow-1" />
+              </div>
+        
+              <!-- Card 1 -->
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary-emphasis">
+                    Jun 12, 2025, 1:30 pm - Aug 28, 2026, 5:00 pm
+                  </strong>
+                  <a href="#" class="icon-link fw-bold text-dark fs-3 icon-link-hover stretched-link">
+                    Sunday evening poetry
+                    <svg class="bi">
+                      <use xlink:href="#chevron-right"></use>
+                    </svg>
+                  </a>
+                  <div class="mb-1 text-body-secondary">
+                    Manhattan Club 350 5th Ave, New York
+                  </div>
+                  <p class="card-text mb-auto">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, architecto?
+                  </p>
+                  <h3 class="mb-0">$85</h3>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="Assets/Home/post33-copyright-1536x1024.jpg" class="img-fluid" alt="" />
+                </div>
+              </div>
+        
+              <!-- Card 2 -->
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary-emphasis">
+                    Jun 12, 2025, 1:30 pm - Aug 28, 2026, 5:00 pm
+                  </strong>
+                  <a href="#" class="icon-link fw-bold text-dark fs-3 icon-link-hover stretched-link">
+                    Sunday evening poetry
+                    <svg class="bi">
+                      <use xlink:href="#chevron-right"></use>
+                    </svg>
+                  </a>
+                  <div class="mb-1 text-body-secondary">
+                    Manhattan Club 350 5th Ave, New York
+                  </div>
+                  <p class="card-text mb-auto">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, architecto?
+                  </p>
+                  <h3 class="mb-0">$85</h3>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="Assets/Home/post33-copyright-1536x1024.jpg" class="img-fluid" alt="" />
+                </div>
+              </div>
+        
+              <!-- Card 3 -->
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary-emphasis">
+                    Jun 12, 2025, 1:30 pm - Aug 28, 2026, 5:00 pm
+                  </strong>
+                  <a href="#" class="icon-link fw-bold text-dark fs-3 icon-link-hover stretched-link">
+                    Sunday evening poetry
+                    <svg class="bi">
+                      <use xlink:href="#chevron-right"></use>
+                    </svg>
+                  </a>
+                  <div class="mb-1 text-body-secondary">
+                    Manhattan Club 350 5th Ave, New York
+                  </div>
+                  <p class="card-text mb-auto">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, architecto?
+                  </p>
+                  <h3 class="mb-0">$85</h3>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="Assets/Home/post33-copyright-1536x1024.jpg" class="img-fluid" alt="" />
+                </div>
+              </div>
+            </div> <!-- Close container -->
+        
+          </div> <!-- Close tab-pane -->
+
+
+           <!-- this is month section start -->
+          <div class="tab-content" id="myTabContent">
+           
+          
+            <div
+              class="tab-pane fade show active"
+              id="profile-tab-pane"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+              tabindex="0"
+            >
+            <div class="container">
+                               
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=mwei913%40gmail.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+            </div>
+            </div>
+ <!-- here  is month section end -->
+
+ <!-- day section start -->
+ <div class="tab-content" id="myTabContent">
+           
+          
+  <div
+    class="tab-pane fade show active"
+    id="contact-tab-pane"
+    role="tabpanel"
+    aria-labelledby="contact-tab"
+    tabindex="0"
+  >
+  
+  </div>
+  </div>
+  <!-- day section end -->
+
+
+        </div> <!-- Close tab-content -->
+        
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination d-flex justify-content-between">
+            <li class="page-item mx-5">
+              <a class="page-link text-dark" href="#">Previous day </a>
+            </li>
+            <li class="page-item mx-5">
+              <a class="page-link text-dark" href="#">Next day </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <section
+      class="container-fluid bg-danger d-flex justify-content-center align-items-center"
+      id="discount"
+    >
+      <div>
+        <h1>Get -30% purchase on order over $299.00</h1>
+        <button class="btn btn-dark text-white fw-bold">MORE INFO</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-fluid">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-2 my-2">
+          <div class="col mb-3">
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+            >
+              <img src="Assets/Home/logo-1.png" class="img-fluid" alt="Logo" />
+            </a>
+            <p class="text-body-secondary">Made by Dinesh © 2025</p>
+          </div>
+
+          <div class="col mb-3">
+            <h5>What's New</h5>
+            <ul class="nav flex-column">
+              <li>
+                <img
+                  src="Assets/Home/book10-copyright-400x600.jpg"
+                  class="img-fluid"
+                  alt="Book"
+                />
+                <h4>The Story About Me</h4>
+                <h3 class="text-danger">
+                  $10.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </h3>
+              </li>
+              <li>
+                <img
+                  src="Assets/Home/book10-copyright-400x600.jpg"
+                  class="img-fluid"
+                  alt="Book"
+                />
+                <h4>The Story About Me</h4>
+                <h3 class="text-danger">
+                  $10.00
+                  <span class="text-secondary text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </h3>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Links</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">About Us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Our Team</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Events</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Store</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Contacts</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Get in Touch</h5>
+            <ul class="nav flex-column">
+              <li class="mb-2 text-body-secondary">Pune -</li>
+              <li class="mb-2 text-body-secondary">Itpreneur Institute</li>
+              <li class="mb-2 text-body-secondary">Null placement</li>
+              <li class="mb-2 text-body-secondary">nikamdinesh362@gmail.com</li>
+              <li class="text-danger">+1 840 841 25 69</li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

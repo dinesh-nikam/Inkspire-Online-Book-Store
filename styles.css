@@ -1,0 +1,130 @@
+
+
+
+#blog-reading{
+    background-image: url("Assets/Home/bg-team-copyright.jpg");
+    background-size: cover;
+    background-position: center;
+   
+    
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+#discount{
+    height: 30vh;
+}
+#discount h1{
+    float: left; 
+    margin:0 60px;
+}
+#discount button{
+    float: right;
+    height: 50px;
+}
+
+.book-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+.nav-tabs .nav-link {
+    
+    
+    font-weight: bold;
+    color: #333;
+}
+.nav-tabs .nav-link.active {
+    background-color: #212529;
+    color: #fff;
+}
+/* .card {
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.05);
+} */
+.discover-btn {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #f8f9fa;
+   
+  }
+  
+  footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+   
+
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+   
+  }
+  
+  footer .nav-link {
+    color: #6c757d; 
+    transition: color 0.3s ease-in-out;
+  }
+  
+  footer .nav-link:hover {
+    color: #007bff; 
+    text-decoration: underline;
+  }
+  
+  footer ul li img {
+    width: 100px;
+    margin-bottom: 10px;
+float: left;
+padding-right: 20px;
+  }
+  
+  footer .text-danger {
+
+    font-weight: bold;
+    font-size: 18px;
+    float: right;
+    
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      text-align: center;
+    }
+    footer .col {
+      margin-bottom: 30px;
+    }
+  }
+  
+  #blog-img img {
+    width: 500px;
+    height: 400px;
+  }
+  #book-product img{
+    
+      height: 250px;
+     
+      
+  }
+  
+  
+ 
