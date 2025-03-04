@@ -31,6 +31,8 @@ body{
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 10px;
+    border-radius: 12px;
+   
 }
 
 .card:hover {
@@ -145,5 +147,21 @@ padding-right: 20px;
       
   }
   
-  
  
+  
+  .card-img-top {
+    height: 225px;
+    object-fit: cover;
+  }
+  .card-body h3, .card-body h4 {
+    color: #343a40;
+    font-weight: 600;
+  }
+  .card-body p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
+  }
+  .card-body p a:hover {
+    text-decoration: underline;
+  }
